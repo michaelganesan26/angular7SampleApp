@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { WarningComponent } from './messages/warning/warning.component';
+import { SuccessComponent } from './messages/success/success.component';
+import { ServerstatusComponent } from './serverstatus/serverstatus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    WarningComponent,
+    SuccessComponent,
+    ServerstatusComponent
   ],
   imports: [
     BrowserModule,

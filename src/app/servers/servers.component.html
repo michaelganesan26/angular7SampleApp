@@ -1,3 +1,13 @@
+<button  [disabled]="serverEnabled"
+         [ngClass]="{'btn btn-primary':serverEnabled,'btn btn-danger':!serverEnabled}">Add Server</button>
+<p [innerText]="currentTime"></p>
+<label>
+  Data Entry:
+  <input type="text"  (input)="trackInputMessage($event)"/>
+</label>
+<div>
+  Your typed message: {{trackMessages}}
+</div>
 <ul>
   <li><app-server class="myColor"></app-server></li>
   <li><app-server class="myColor"></app-server></li>

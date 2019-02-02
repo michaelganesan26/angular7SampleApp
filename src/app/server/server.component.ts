@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server.component.sass']
 })
 export class ServerComponent implements OnInit {
-   title =  'This is a server module';
+   serverStatus =  'Online';
+   serverId = '2234';
+  title: String;
   constructor() { }
 
   ngOnInit() {

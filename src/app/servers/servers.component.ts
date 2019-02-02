@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import {Time} from '@angular/common';
 
 @Component({
    selector: 'app-servers',
@@ -7,11 +8,31 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.sass']
 })
-export class ServersComponent implements OnInit {
-
+export class ServersComponent implements OnInit, AfterViewInit {
+ serverEnabled = false;
+ currentTime: string;
+ trackMessages: String;
   constructor() { }
 
-  ngOnInit() {
+  ngAfterViewInit(): void {
+    // enable the button
+    setTimeout(() => {
+      this.serverEnabled = !this.serverEnabled;
+    }, 2000);
+
+    setInterval(() => {
+            this.currentTime = `Your current time is: ${new Date().toLocaleTimeString()}`;
+    }, 1000);
   }
+
+  ngOnInit() {
+
+  }
+
+    trackInputMessage(event: any): void {
+
+        this.trackMessages = (<HTMLInputElement>event.target).value;
+    }
+
 
 }

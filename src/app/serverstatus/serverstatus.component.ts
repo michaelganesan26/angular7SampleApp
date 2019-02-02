@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {__values} from 'tslib';
 
 @Component({
   selector: 'app-serverstatus',
@@ -9,13 +10,14 @@ export class ServerstatusComponent implements OnInit {
   serverId = 12;
   serverStatus = 'offline';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   getServerStatus(): string {
-      return (this.serverStatus + '  ' + (new Date()).toUTCString());
-    }
+    return (this.serverStatus + '  ' + (new Date()).toUTCString());
+  }
 
 }

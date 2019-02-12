@@ -12,6 +12,8 @@ export class ServersComponent implements OnInit, AfterViewInit {
  serverEnabled = false;
  currentTime: string;
  trackMessages: String;
+ myData: String;
+
   constructor() { }
 
   ngAfterViewInit(): void {

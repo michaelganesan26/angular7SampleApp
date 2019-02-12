@@ -5,6 +5,10 @@
   Data Entry:
   <input type="text"  (input)="trackInputMessage($event)"/>
 </label>
+<label>Sample Data:
+  <input type="text" [(ngModel)]="myData">
+</label>
+<p class="inlineText">{{myData}}</p>
 <div>
   Your typed message: {{trackMessages}}
 </div>
